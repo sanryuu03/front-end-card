@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.padding-card {
+  padding: 35px, 31px, 35px, 31px;
+}

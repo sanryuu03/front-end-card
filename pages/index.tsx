@@ -1,4 +1,7 @@
 import Head from "next/head";
+import Image from "next/image";
+import profile from "./Ellipse 1.png";
+import twitter from "./twitter.png";
 
 export default function Home() {
   return (
@@ -9,7 +12,100 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <div className="bg-[#141d26] w-[923px] h-[600px] relative overflow-hidden">
+        <div
+          className="bg-[#243447] rounded-[10px] flex flex-col gap-[15px] items-start justify-start w-[601px] absolute left-[161px] top-[186px] pt-[35px] pr-[31px] pb-[35px] pl-[31px]"
+          style={{ boxShadow: "0px 15px 60px 0px rgba(52, 81, 116, 0.15)" }}
+        >
+          <div className="flex flex-row items-center justify-between self-stretch shrink-0 relative">
+            <div className="flex flex-row gap-[22px] items-center justify-start shrink-0 relative">
+              <Image
+                src={profile}
+                width={50}
+                height={50}
+                alt={"profile"}
+                className="rounded-[50%] shrink-0 relative"
+              />
+
+              <div className="flex flex-col gap-px items-start justify-start shrink-0 relative">
+                <div
+                  className="text-[#ffffff] text-left relative"
+                  style={{ font: "700 18px 'Source Sans Pro', sans-serif" }}
+                >
+                  John Doe
+                </div>
+
+                <div
+                  className="text-[rgba(255,255,255,0.60)] text-left relative"
+                  style={{ font: "400 16px 'Source Sans Pro', sans-serif" }}
+                >
+                  @realjohndoe
+                </div>
+              </div>
+            </div>
+            <Image
+              src={twitter}
+              alt={"twitter"}
+              width={30}
+              height={30}
+              className="shrink-0 relative overflow-visible"
+            />
+          </div>
+
+          <div
+            className="text-left relative self-stretch"
+            style={{ font: "400 16px/26px 'Source Sans Pro', sans-serif" }}
+          >
+            <span>
+              <span className="text-white">
+                Why do they call it &#039;debugging&#039; when it feels more
+                like &#039;wildly guessing and hoping for the best&#039;?{" "}
+              </span>
+              <span className="text-white">#programming</span>
+              <span className="text-white"> </span>
+              <span className="text-white">#coding</span>
+              <span className="text-white"> </span>
+              <span className="text-white">#debugging</span>
+            </span>
+          </div>
+
+          <div className="flex flex-row gap-5 items-start justify-start shrink-0 relative">
+            <div className="flex flex-row gap-2.5 items-start justify-start shrink-0 relative">
+              <svg
+                className="shrink-0 relative overflow-visible"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.84 4.61C20.3292 4.099 19.7228 3.69364 19.0554 3.41708C18.3879 3.14052 17.6725 2.99817 16.95 2.99817C16.2275 2.99817 15.5121 3.14052 14.8446 3.41708C14.1772 3.69364 13.5708 4.099 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.57831 8.50903 2.99871 7.05 2.99871C5.59096 2.99871 4.19169 3.57831 3.16 4.61C2.1283 5.64169 1.54871 7.04097 1.54871 8.5C1.54871 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7563 11.2728 22.0329 10.6054C22.3095 9.93789 22.4518 9.22249 22.4518 8.5C22.4518 7.77751 22.3095 7.0621 22.0329 6.39464C21.7563 5.72718 21.351 5.12075 20.84 4.61V4.61Z"
+                  stroke="white"
+                  strokeOpacity="0.6"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+
+              <div
+                className="text-[rgba(255,255,255,0.60)] text-left relative"
+                style={{ font: "600 16px/26px 'Source Sans Pro', sans-serif" }}
+              >
+                650
+              </div>
+            </div>
+
+            <div
+              className="text-[rgba(255,255,255,0.60)] text-left relative"
+              style={{ font: "600 16px/26px 'Source Sans Pro', sans-serif" }}
+            >
+              3:40 PM – Feb 24, 2022
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
